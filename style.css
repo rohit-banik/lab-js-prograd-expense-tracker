@@ -10,7 +10,6 @@
 
 body {
   background-color: #be2edd;
-  /* background-image: url('./1.jpg'); */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -27,12 +26,16 @@ body {
   border:1px solid black;
   padding: 2%;
   background: #f5f7f6;
- 
+  
 }
 
 h1 {
   letter-spacing: 1px;
   margin: 0;
+}
+
+h2{
+  color: #fffeff;
 }
 
 h3 {
@@ -41,14 +44,16 @@ h3 {
   margin: 40px 0 10px;
   width: 100%;
 }
-.histroy{
+.history{
   position: absolute;
   margin-top:-8% ;
   margin-left:30% ;
   width: 15%;
   height: 10%;
+}
 
-
+.history h3{
+  color: #fffeff;
 }
 
 h4 {
@@ -59,7 +64,6 @@ h4 {
 .inc-exp-container {
   background-color: #fff;
   box-shadow: var(--box-shadow);
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
@@ -78,6 +82,20 @@ h4 {
   font-size: 20px;
   letter-spacing: 1px;
   margin: 5px 0;
+}
+
+.income-box,
+.expense-box{
+  padding: 20px;
+  cursor: default;
+  transition: all 0.2s ease-in-out;
+}
+.income-box:hover{
+  background-color: #c4fddc;
+}
+
+.expense-box:hover{
+  background-color: #ffc6bf;
 }
 
 .money.plus {
@@ -101,11 +119,18 @@ input[type='number'] {
   font-size: 16px;
   padding: 10px;
   width: 100%;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type='text']:focus,
+input[type='number']:focus {
+  border: 1px solid #9000d3;
 }
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #9000d3;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -114,11 +139,16 @@ input[type='number'] {
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+  border: 1px solid #9000d3;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn:focus,
+.btn:hover,
 .delete-btn:focus {
-  outline: 0;
+  outline: none;
+  background-color: #fffeff;
+  border: 1px solid #9000d3;
+  color: #9000d3;
 }
 
 .list {
@@ -141,6 +171,14 @@ input[type='number'] {
 
 .list li.plus {
   border-right: 5px solid #2ecc71;
+}
+
+.list li.plus:hover {
+  background: #c4fddc;
+}
+
+.list li.minus:hover {
+  background: #ffc6bf;
 }
 
 .list li.minus {
